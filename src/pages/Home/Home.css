@@ -15,7 +15,7 @@
     color: white;
     text-align: center;
     margin-top: -80px; /* Pull content up behind navbar */
-    padding-top: 80px; /* Push content down to compensate */
+    padding-top: 100px; /* Push content down to compensate */
 }
 
 /* Add responsive styles for the hero section */

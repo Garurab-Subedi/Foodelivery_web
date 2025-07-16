@@ -1,14 +1,14 @@
 import React from 'react';
 import './Home.css';
-import backgroundhero from '../../assets/hero/hero-1.jpg'
-
+import Hero from '../../Components/Hero/Hero';
 
 const Home = () => {
   return (
     <div className='home'>
-      <div className='hero-container'>
-        <img src={backgroundhero} alt="" />
+      <div className='hero-banner'>
+       <Hero />
       </div>
+
     </div>
   )
 }

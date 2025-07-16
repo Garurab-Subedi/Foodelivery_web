@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import "./Navbar.css";
 import logo from "../../assets/logo/logo.png";
+import cart_icon from "../../assets/cart_icon.png";
 import { Link } from 'react-router-dom';
 import { FaBars, FaTimes, FaShoppingCart, FaUser } from 'react-icons/fa';
 
@@ -46,17 +47,17 @@ const Navbar = () => {
                         <Link to="/">Home</Link>
                         {menu === "home" ? <hr/> : null}
                     </li>
-                    <li onClick={() => { setMenu("Mens"); closeMobileMenu(); }}>
-                        <Link to="/mens">Mens</Link>
-                        {menu === "Mens" ? <hr/> : null}
+                    <li onClick={() => { setMenu("Menu"); closeMobileMenu(); }}>
+                        <Link to="/menu">Menu</Link>
+                        {menu === "Menu" ? <hr/> : null}
                     </li>
-                    <li onClick={() => { setMenu("Womens"); closeMobileMenu(); }}>
-                        <Link to="/womens">Womens</Link>
-                        {menu === "Womens" ? <hr/> : null}
+                    <li onClick={() => { setMenu("About"); closeMobileMenu(); }}>
+                        <Link to="/about">About</Link>
+                        {menu === "About" ? <hr/> : null}
                     </li>
-                    <li onClick={() => { setMenu("Kids"); closeMobileMenu(); }}>
-                        <Link to="/kids">Kids</Link>
-                        {menu === "Kids" ? <hr/> : null}
+                    <li onClick={() => { setMenu("Contact"); closeMobileMenu(); }}>
+                        <Link to="/contact">Contact</Link>
+                        {menu === "Contact" ? <hr/> : null}
                     </li>
                 </ul>
                 
@@ -64,7 +65,7 @@ const Navbar = () => {
                     <Link to="/login" onClick={closeMobileMenu}>
                         <button>
                             <span className="desktop-text">Login</span>
-                            <FaUser className="mobile-icon" />
+                            <FaUser className="mobile-icon"/>
                         </button>
                     </Link>
                     <Link to="/cart" onClick={closeMobileMenu}>
