@@ -4,9 +4,9 @@
     left: 0;
     right: 0;
     display: flex;
-    justify-content: space-between;
+    justify-content:space-around;
     align-items: center;
-    padding: 16px;
+    padding: 20px;
     z-index: 1000;
     background-color: transparent;
     transition: all 0.3s ease;
@@ -66,6 +66,7 @@
     font-weight: 500;
     margin: 0;
     padding: 0;
+    cursor: pointer;
 }
 
 .navbar.scrolled .nav-menu {

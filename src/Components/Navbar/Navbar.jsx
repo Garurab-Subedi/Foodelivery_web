@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import "./Navbar.css";
 import logo from "../../assets/logo/logo.png";
-import cart_icon from "../../assets/cart_icon.png";
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { FaBars, FaTimes, FaShoppingCart, FaUser } from 'react-icons/fa';
 
 const Navbar = () => {
     const [menu, setMenu] = useState("home");
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
+    const location = useLocation();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -19,6 +19,11 @@ const Navbar = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    // Check if on home path
+    const isHome = location.pathname === '/';
+    // Determine if navbar should be light or dark
+    const useLightNavbar = !isHome || isScrolled;
+
     const toggleMobileMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
     };
@@ -28,11 +33,11 @@ const Navbar = () => {
     };
 
     return (
-        <div className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
+        <div className={`navbar ${useLightNavbar ? 'scrolled' : ''}`}>
             <div className='nav-logo'>
-                <img src={logo} alt="" height="50px"/>
+                <img src={logo} alt="logo" height="50px" />
             </div>
-            
+
             <div className='menu-icon' onClick={toggleMobileMenu}>
                 {isMobileMenuOpen ? (
                     <FaTimes className="close-icon" />
@@ -45,27 +50,27 @@ const Navbar = () => {
                 <ul className='nav-menu'>
                     <li onClick={() => { setMenu("home"); closeMobileMenu(); }}>
                         <Link to="/">Home</Link>
-                        {menu === "home" ? <hr/> : null}
+                        {menu === "home" ? <hr /> : null}
                     </li>
                     <li onClick={() => { setMenu("Menu"); closeMobileMenu(); }}>
                         <Link to="/menu">Menu</Link>
-                        {menu === "Menu" ? <hr/> : null}
+                        {menu === "Menu" ? <hr /> : null}
                     </li>
                     <li onClick={() => { setMenu("About"); closeMobileMenu(); }}>
                         <Link to="/about">About</Link>
-                        {menu === "About" ? <hr/> : null}
+                        {menu === "About" ? <hr /> : null}
                     </li>
                     <li onClick={() => { setMenu("Contact"); closeMobileMenu(); }}>
                         <Link to="/contact">Contact</Link>
-                        {menu === "Contact" ? <hr/> : null}
+                        {menu === "Contact" ? <hr /> : null}
                     </li>
                 </ul>
-                
+
                 <div className='nav-login-cart'>
                     <Link to="/login" onClick={closeMobileMenu}>
                         <button>
                             <span className="desktop-text">Login</span>
-                            <FaUser className="mobile-icon"/>
+                            <FaUser className="mobile-icon" />
                         </button>
                     </Link>
                     <Link to="/cart" onClick={closeMobileMenu}>
@@ -74,10 +79,10 @@ const Navbar = () => {
                             <div className="nav-cart-count">0</div>
                         </div>
                     </Link>
-                </div>  
+                </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default Navbar;

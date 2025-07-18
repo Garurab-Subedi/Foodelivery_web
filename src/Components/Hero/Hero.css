@@ -3,18 +3,20 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  padding: 2rem;
 }
 
+/* Left Section styles */
 .hero-container {
   position: relative;
-  max-width: 1200px;
+  max-width: 900px;
   width: 100%;
 }
 
 .burger-wrapper {
   position: relative;
   display: inline-block;
+  padding-right: 40px;
+  padding-top: 50px;
 }
 
 .burger-image {
@@ -25,8 +27,8 @@
 
 .price-badge {
   position: absolute;
-  top: -20px;
-  right: -20px;
+  top: 30px;
+  right: 80px;
   z-index: 10;
 }
 
@@ -57,4 +59,117 @@
   font-size: 1.8rem;
   font-weight: bold;
   margin: 0;
+}
+
+/* Right Section styles */
+.hero-right {
+  max-width: 500px;
+}
+
+.new-label {
+  color: white;
+  font-size: 6rem;
+  font-weight: 900;
+}
+
+.hero-right h1 {
+  font-size: 2rem;
+  margin: 5px 0 20px;
+  color: white;
+  font-weight: 900;
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgb(234, 226, 226);
+  margin-bottom: 30px;
+}
+
+.order-button {
+  background-color: rgb(244, 244, 20);
+  color: black;
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.order-button:hover {
+  background-color: #c1121f;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .hero {
+    flex-direction: column;
+    height: auto;
+    padding: 50px;
+  }
+  .hero-left,
+  .hero-right {
+    width: 100%;
+  }
+  .hero-container {
+    max-width: 100%;
+  }
+  .burger-image {
+    max-height: 300px;
+  }
+  .price-badge {
+    top: 20px;
+    right: 40px;
+  }
+  .new-label {
+    font-size: 4rem;
+  }
+  .hero-right h1 {
+    font-size: 1.8rem;
+  }
+  .description {
+    font-size: 0.9rem;
+  }
+  .order-button {
+    padding: 12px 30px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .burger-image {
+    max-height: 200px;
+  }
+  .price-badge {
+    top: 30px;
+    right: 20px;
+  }
+  .badge-image{
+    height: 100px;
+    width: 100px;
+  }
+  .only{
+    font-size: 14px;
+  }
+  .price{
+    font-size: 20px;
+  }
+  .new-label {
+    font-size: 3rem;
+  }
+  .hero-right h1 {
+    font-size: 1.5rem;
+  }
+  .description {
+    font-size: 0.85rem;
+  }
+  .order-button {
+    padding: 10px 25px;
+    font-size: 0.9rem;
+  }
 }
