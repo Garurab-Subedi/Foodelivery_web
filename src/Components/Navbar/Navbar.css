@@ -105,7 +105,12 @@
     display: flex;
     align-items: center;
     gap: 25px;
+    text-decoration: none;
 }
+.nav-login-cart a {
+  text-decoration: none; /* 👈 this removes underline from Login link */
+}
+
 
 .nav-login-cart button {
     width: 107px;
@@ -128,6 +133,7 @@
 .navbar.scrolled .nav-login-cart button {
     color: #515151;
     background-color: white;
+   
 }
 
 .nav-login-cart button:hover {
@@ -136,6 +142,9 @@
 
 .navbar.scrolled .nav-login-cart button:hover {
     background-color: #f3f3f3;
+}
+.navbar.scrolled .desktop-text{
+    list-style: none;
 }
 
 .cart-container {
