@@ -141,7 +141,7 @@
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 592px) {
   .burger-image {
     max-height: 200px;
   }
