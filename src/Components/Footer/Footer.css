@@ -1,0 +1,126 @@
+.footer{
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    bottom: 20px;
+    width: 100%;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+}
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.footer-details{
+    display: flex;
+    flex-direction: row;
+}
+.footer-text{
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+}
+.footer-text h1{
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+}
+.footer-text ul{
+    list-style: none;
+    padding: 0;
+    margin: 5px 0 0;
+}
+.footer-text ul li{
+    font-size: 14px;
+    color: #626262;
+    margin: 5px 0;
+}
+.contact-us{
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+    padding: 0;
+    margin-top: -40px;
+}
+.contact-us h1{
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+}
+.contact-us p{
+    font-size: 14px;
+    color: #626262;
+    margin: 5px 0;
+}
+.payment{
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+    padding: 0;
+    margin-top: -70px;
+    justify-content: center;
+}
+.payment h1{
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+}
+.payment p{
+    font-size: 14px;
+    color: #626262;
+    margin: 5px 0;
+    max-width: 200px;
+}
+.social-media-links{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    padding: 0;
+    margin-top: -45px;
+}
+.social-media-links h1{
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+}
+.footer-social-icon {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+@media (max-width: 992px) {
+    /* .footer{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    } */
+    .footer-details{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+}
+@media (max-width: 450px) {
+    .footer{
+        display: flex;
+        flex-direction: column;
+        gap:30px
+    }
+    .footer-details{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:90px;
+
+    }
+    .footer-details .contact-us{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 10px;
+    }
+}
