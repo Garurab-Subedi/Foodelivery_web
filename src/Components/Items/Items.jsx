@@ -1,28 +1,40 @@
-import React from 'react'
-import './Items.css'
-import burger1 from '../../assets/menu/burger-11.jpg'
-// import burger2 from '../../assets/menu/burger-12.png';
-// import burger3 from '../../assets/menu/burger-13.png';
-// import burger4 from '../../assets/menu/burger-14.png';
+import React from 'react';
+import './Items.css';
+import burger1 from '../../assets/menu/burger-11.jpg';
+import burger2 from '../../assets/menu/burger-12.jpg';
+import burger3 from '../../assets/menu/burger-13.jpg';
+import burger4 from '../../assets/menu/burger-14.jpg';
+import ItemCard from '../../props/itemCard'
+
+const itemData = [
+  { image: burger1, title: 'Cheesy Burger' },
+  { image: burger2, title: 'Ham Burger' },
+  { image: burger3, title: 'Chicken Burger' },
+  { image: burger4, title: 'Big Daddy Burger' },
+  { image: burger1, title: 'Double Cheese' },
+  { image: burger2, title: 'Spicy Burger' },
+  { image: burger3, title: 'BBQ Burger' },
+  { image: burger4, title: 'Monster Burger' },
+];
 
 const Items = () => {
   return (
-    <div className='items'>
-        <div className='item-heading'>
-            <h1>OUR CARZY BURGER</h1>
-            <p>Fengjai primis ligula risus auctor laoreet augue egestas mauris
-            viverra tortor in laculis pretium at magna mauris ipsum primis
-            rhoncus fengjai</p>
+    <div className="items">
+      <div className="item-heading">
+        <h1>OUR CRAZY BURGER</h1>
+        <p>
+          Fengjai primis ligula risus auctor laoreet augue egestas mauris viverra
+          tortor in laculis pretium at magna mauris ipsum primis rhoncus fengjai
+        </p>
       </div>
+
       <div className="item-container">
-        <div className="item-card">
-          <img src={burger1} alt="Burger" height="100px"/>
-          <h2>Cheesy Burger</h2>
-          <p>$5.99</p>
-        </div>
+        {itemData.map((item, index) => (
+          <ItemCard key={index} image={item.image} title={item.title} />
+        ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Items
+export default Items;
