@@ -1,0 +1,108 @@
+.fooddetails {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 100px auto 80px;
+  max-width: 1200px;
+  gap: 40px;
+  padding: 0 20px;
+}
+
+.fooddetails-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.fooddetails-left img {
+  max-width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.fooddetails-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.fooddetails-right h1 {
+  font-size: 36px;
+  color: #333;
+}
+
+.fooddetails-right-star {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.fooddetails-right-star p {
+  margin-left: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+.food-price {
+  font-size: 28px;
+  font-weight: bold;
+  color: red;
+}
+
+.fooddetails-description {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.fooddetails-quantity {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.qty-btn {
+  width: 36px;
+  height: 36px;
+  font-size: 20px;
+  border: 1px solid #ccc;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.qty-btn:hover {
+  background-color: #f5f5f5;
+}
+
+.fooddetails-quantity span {
+  font-size: 18px;
+  min-width: 24px;
+  text-align: center;
+}
+
+.add-to-cart-btn {
+  padding: 14px 30px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: fit-content;
+  transition: 0.3s;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #c70000;
+}
+
+.food-total-price {
+  font-size: 20px;
+  color: green;
+  margin-top: 10px;
+}
