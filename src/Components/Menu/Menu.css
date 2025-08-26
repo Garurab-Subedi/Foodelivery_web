@@ -1,0 +1,46 @@
+.menucomponent {
+  display: 3;
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  padding: 20px;
+  margin: 100px 140px 50px;
+  height: calc(100vh - 50px);
+  overflow-y: scroll;
+  position: sticky;
+}
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-track{
+    background-color: #f1f1f1;
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(179, 179, 179);
+}
+
+/* Sidebar */
+.menu-sidebar {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+
+.menu-category {
+  padding: 12px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+  color: #333;
+  font-weight: 500;
+}
+
+.menu-category.active {
+  background: #ffe6ee;
+  font-weight: bold;
+  color: #e60023;
+}
+.menu-category:hover {
+  background: #ffe6ee;
+  font-weight: bold;
+  color: #e60023;
+}

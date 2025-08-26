@@ -1,0 +1,50 @@
+.menufood {
+  flex: 1;
+  padding: 120px;
+  overflow-y: auto;
+}
+
+.menufood-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.menufood-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.menufood-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.menufood-card h3 {
+  margin-bottom: 6px;
+}
+
+.menufood-card .price {
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+.add-btn {
+  background: #ff0033;
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.add-btn:hover {
+  background: #cc002a;
+}
+.menufood-card:hover {
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+}

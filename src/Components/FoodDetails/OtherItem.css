@@ -1,0 +1,79 @@
+.foodetails-other{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 80px 80px;
+}
+.other-items{
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+.other-items-card{
+    background-color: #fff;
+    border-radius: 10px;
+    width: 300px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    cursor: pointer;
+    padding: 10px;
+    text-align: start;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.other-item-addcart{
+    display: flex;
+    flex-direction: row;
+    margin-top: -10px;
+    margin-right: 10px;
+}
+.others-items-img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.other-items-card h2{
+    font-size: 20px;
+    font-weight: 600;
+    margin: 5px 0;
+    justify-content: start;
+    align-items: start;
+}
+.other-items-card p{
+    font-size: 18px;
+    color: #5e5a5a;
+    margin-bottom: 10px;
+}
+.other-item-addcart{
+    display: flex;
+    gap: 70px;
+    margin-top: 5px;
+    align-items: center;
+}
+.other-item-addcart h1{
+    font-weight: 600;
+    font-size: 18px;
+}
+.other-item-cart{
+  display: flex;
+  gap: 10px;
+  background-color: white;
+  color: red;
+  border: 1px solid red;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 800;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.other-item-cart:hover{
+    background-color: red;
+    color: white;
+    border: 1px solid red;
+    transform: translateY(-3px);
+   box-shadow: 0 5px 15px rgba(255, 0, 0, 0.1);
+}
+

@@ -4,7 +4,7 @@
   margin: 100px auto 80px;
   max-width: 1200px;
   gap: 40px;
-  padding: 0 20px;
+  padding: 0 70px;
 }
 
 .fooddetails-left {
@@ -100,7 +100,6 @@
 .add-to-cart-btn:hover {
   background-color: #c70000;
 }
-
 .food-total-price {
   font-size: 20px;
   color: green;
