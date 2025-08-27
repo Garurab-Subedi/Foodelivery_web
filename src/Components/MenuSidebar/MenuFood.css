@@ -1,9 +1,19 @@
 .menufood {
-  flex: 1;
-  padding: 120px;
-  overflow-y: auto;
+  flex: 6;
+  padding: 100px;
+  overflow-y: scroll;
+  height: calc(100vh - 50px);
+  width: 100%;
+  margin-left: -50px;
 }
-
+.menufoodWapper{
+  width: 100%;
+  padding: 20px;
+  margin-left: -30px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+}
 .menufood-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -17,6 +27,15 @@
   box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
   text-align: center;
 }
+.category-section {
+  margin-bottom: 40px;
+}
+
+.menufood-header{
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
 
 .menufood-card img {
   width: 100%;
@@ -26,16 +45,34 @@
 
 .menufood-card h3 {
   margin-bottom: 6px;
+  font-size: 16px;
+}
+.menufood-desc {
+  font-size: 14px;
+  color: darkgray;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.menufood-card .price {
-  font-weight: bold;
-  margin: 8px 0;
+.menufood-price{
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  justify-content: space-between;
+  align-items: center;
+  color: green;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: 600;
 }
 
 .add-btn {
   background: #ff0033;
   color: #fff;
+  font-weight: 800;
   border: none;
   padding: 10px 14px;
   border-radius: 6px;
@@ -44,6 +81,7 @@
 
 .add-btn:hover {
   background: #cc002a;
+  color: white;
 }
 .menufood-card:hover {
   box-shadow: 0px 4px 12px rgba(0,0,0,0.15);

@@ -1,9 +1,9 @@
 .menucomponent {
-  display: 3;
+  flex: 1.5;
   font-family: Arial, sans-serif;
   background: #f9f9f9;
-  padding: 20px;
-  margin: 100px 140px 50px;
+  padding: 10px;
+  margin: 100px 0px 50px 110px;
   height: calc(100vh - 50px);
   overflow-y: scroll;
   position: sticky;
@@ -23,7 +23,7 @@
   width: 200px;
   display: flex;
   flex-direction: column;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .menu-category {

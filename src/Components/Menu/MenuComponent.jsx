@@ -1,5 +1,5 @@
 import React from "react";
-import "./Menu.css";
+import "./MenuComponent.css";
 
 const categories = [
   "DEAL",
@@ -15,7 +15,15 @@ const categories = [
   "KRUSHERS",
 ];
 
-const MenuComponent = ({ activeCategory, setActiveCategory }) => {
+const MenuComponent = ({ activeCategory, setActiveCategory, categoryRefs }) => {
+  const handleCategoryClick = (cat) => {
+    setActiveCategory(cat);
+    // Scroll to the category section
+    if (categoryRefs.current[cat]) {
+      categoryRefs.current[cat].scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="menucomponent">
       <div className="menu-sidebar">
@@ -23,7 +31,7 @@ const MenuComponent = ({ activeCategory, setActiveCategory }) => {
           <div
             key={idx}
             className={`menu-category ${activeCategory === cat ? "active" : ""}`}
-            onClick={() => setActiveCategory(cat)}
+            onClick={() => handleCategoryClick(cat)}
           >
             {cat}
           </div>
